@@ -40,3 +40,18 @@ test("Add two number return sum", function () {
 
   expect(result).toEqual(9);
 });
+
+test("Add unknown  numbers", function () {
+  //Arrange
+
+  let input = "1,2,3,4,5,6,7,8,9,10";
+
+  //Act
+
+  let result = add(input);
+
+  //Assert
+
+  expect(result).toEqual(55);
+});
+
