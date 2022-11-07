@@ -55,3 +55,46 @@ test("Add unknown  numbers", function () {
   expect(result).toEqual(55);
 });
 
+test("Ignore numbers greater than 1000", function () {
+  //Arrange
+
+  let input = "2, 1001";
+
+  //Act
+
+  let result = add(input);
+
+  //Assert
+
+  expect(result).toEqual(2);
+});
+
+test("Ignore numbers greater than 1000", function () {
+  //Arrange
+
+  let input = "2, 1001";
+
+  //Act
+
+  let result = add(input);
+
+  //Assert
+
+  expect(result).toEqual(1002);
+});
+
+test("Ignore numbers greater than 1000", function () {
+  //Arrange
+
+  let input = "2, -1";
+
+  //Act
+
+  let result = add(input);
+
+  //Assert
+
+  expect(function(){
+      add(input)
+  }).toThrow()
+});
